@@ -13,6 +13,9 @@ import { SharedModule } from './shared/shared.module';
     BaseModule,
     PagesModule,
     SharedModule
+  ],
+  exports: [
+    PagesModule
   ]
 })
 export class ViewModule { }
