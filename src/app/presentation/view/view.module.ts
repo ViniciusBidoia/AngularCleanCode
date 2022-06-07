@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BaseModule } from './base/base.module';
+import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
 
 
@@ -10,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     CommonModule,
     BaseModule,
+    PagesModule,
     SharedModule
   ]
 })
