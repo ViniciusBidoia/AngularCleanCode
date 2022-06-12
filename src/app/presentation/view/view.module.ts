@@ -4,8 +4,6 @@ import { BaseModule } from './base/base.module';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
 
-
-
 @NgModule({
   declarations: [],
   imports: [
@@ -16,6 +14,7 @@ import { SharedModule } from './shared/shared.module';
   ],
   exports: [
     PagesModule
-  ]
+  ],
 })
-export class ViewModule { }
+
+export class ViewModule {}
