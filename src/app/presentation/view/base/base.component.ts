@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { User } from 'src/app/domain/models/user';
+import { AuthService } from 'src/app/infra/auth/auth.service';
 
 @Component({
   selector: 'app-base',
@@ -9,10 +11,20 @@ import { Route, Router } from '@angular/router';
 export class BaseComponent implements OnInit {
 
   constructor(
-    private _routes: Router
+    private _router: Router,
+    private _auth: AuthService
   ) { }
 
   ngOnInit(): void {
+  }
+
+  get user(): User{
+    return this._auth.credentials
+  }
+
+  logout(){
+    this._auth.credentials = null!;
+    this._router.navigateByUrl('/login', { replaceUrl: true });
   }
 
 }
