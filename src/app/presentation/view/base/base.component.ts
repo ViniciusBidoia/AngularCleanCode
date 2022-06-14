@@ -16,6 +16,9 @@ export class BaseComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    if(!this.user){
+      this.logout();
+    }
   }
 
   get user(): User{
