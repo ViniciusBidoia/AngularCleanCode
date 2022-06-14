@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     console.log('Realiza o Login');
+    console.log(this.form.value)
   }
 
 }
