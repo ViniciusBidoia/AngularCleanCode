@@ -6,6 +6,7 @@ import { LoginComponent } from './login.component';
 import { AppMaterialModule } from 'src/app/app-material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../../shared/shared.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { SharedModule } from '../../shared/shared.module';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    FlexLayoutModule,
     LoginRoutingModule,
     AppMaterialModule,
     SharedModule
