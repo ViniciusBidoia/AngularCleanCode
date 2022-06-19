@@ -8,7 +8,7 @@ import {
 } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { AuthService } from '../auth/auth.service';
+import { AuthService } from '../../data/services/auth/auth.service';
 import { Router } from '@angular/router';
 
 @Injectable()
@@ -44,6 +44,8 @@ export class HttpInterceptorInterceptor implements HttpInterceptor {
         this._router.navigateByUrl('/login', { replaceUrl: true });
         break;
       case 404:
+        errs.push('<strong>404</strong>: O recurso requisitado não existe.');
+        break;
       case 406:
       case 409:
       case 500:
@@ -51,6 +53,6 @@ export class HttpInterceptorInterceptor implements HttpInterceptor {
         break;
     }
 
-    return throwError(() => new Error('test'));
+    return throwError(() => new Error());
   }
 }
