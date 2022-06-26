@@ -40,6 +40,6 @@ export class LoginComponent implements OnInit {
         (this._serviceAuth.credentials.token = data.token);
       });
 
-      this._router.navigateByUrl('/home', { replaceUrl: true });
+      this._router.navigateByUrl('/base', { replaceUrl: true });
   }
 }

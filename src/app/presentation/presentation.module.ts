@@ -12,6 +12,9 @@ import { ViewModule } from './view/view.module';
   ],
   exports: [
     ViewModule
+  ],
+  providers: [
+
   ]
 })
 export class PresentationModule { }
