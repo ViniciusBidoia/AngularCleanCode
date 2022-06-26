@@ -16,18 +16,7 @@ export class BaseComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // if(!this.user){
-    //   this.logout();
-    // }
-  }
 
-  get user(): User{
-    return this._auth.credentials
-  }
-
-  logout(){
-    this._auth.credentials = null!;
-    this._router.navigateByUrl('/login', { replaceUrl: true });
   }
 
 }

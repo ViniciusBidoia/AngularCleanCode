@@ -6,7 +6,7 @@ import { Login } from 'src/app/domain/models/login';
 import { User } from 'src/app/domain/models/user';
 import { environment } from "../../../environments/environment";
 
-var apiUrlAuth: string = `${environment.urlApi.urlBase}${environment.urlApi.urlAuth}`
+var apiUrlAuth: string = `${environment.urlApi.urlBase}${environment.urlApi.urlAuth.base}`
 
 @Injectable({
   providedIn: 'root'
