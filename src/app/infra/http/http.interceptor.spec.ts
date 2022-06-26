@@ -1,16 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
-import { HttpInterceptorInterceptor } from './http-interceptor.interceptor';
+import { HttpInterceptor as HttpInterceptor } from './http.interceptor';
 
 describe('HttpInterceptorInterceptor', () => {
   beforeEach(() => TestBed.configureTestingModule({
     providers: [
-      HttpInterceptorInterceptor
+      HttpInterceptor
       ]
   }));
 
   it('should be created', () => {
-    const interceptor: HttpInterceptorInterceptor = TestBed.inject(HttpInterceptorInterceptor);
+    const interceptor: HttpInterceptor = TestBed.inject(HttpInterceptor);
     expect(interceptor).toBeTruthy();
   });
 });
